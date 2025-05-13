@@ -1,0 +1,20 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\com",
+    "\\src\\main\\java\\com\\hotel",
+    "\\src\\main\\java\\com\\hotel\\booking",
+    "\\src\\main\\java\\com\\hotel\\booking\\repository",
+    "\\src\\main\\resources",
+    "\\src\\test",
+    "\\src\\test\\java",
+    "\\src\\test\\java\\com",
+    "\\src\\test\\java\\com\\hotel",
+    "\\src\\test\\java\\com\\hotel\\booking"
+  ],
+  "SelectedNode": "\\src\\test\\java\\com\\hotel\\booking\\HotelBookingApplicationTests.java",
+  "PreviewInSolutionExplorer": false
+}
