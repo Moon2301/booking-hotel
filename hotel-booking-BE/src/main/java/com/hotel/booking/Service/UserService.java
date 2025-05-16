@@ -1,4 +1,4 @@
-package com.hotel.booking.scrips;
+package com.hotel.booking.Service;
 
 import com.hotel.booking.model.Users;
 import com.hotel.booking.repository.UsersRepository;
@@ -17,7 +17,6 @@ public class UserService {
         return userRepository.save(user);  // Sửa lại từ UsersRepository.save(user)
     }
 
-    // Xác thực người dùng
     public Users authenticate(String username, String password) {
         Users user = userRepository.findByUsername(username);  // Sửa lại từ UserRepository.findByUsername
         if (user != null && user.getPasswordHash().equals(password)) {

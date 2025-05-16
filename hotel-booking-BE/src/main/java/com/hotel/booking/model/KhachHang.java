@@ -8,7 +8,6 @@ public class KhachHang {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long maKH;
-    
     private String gtinh;
     private String tenKH;
     private String cmnd;
@@ -16,20 +15,15 @@ public class KhachHang {
     private String soDT;
     private String email;
 
+    public KhachHang() {
+
+    }
+
     // Getters and Setters
     public Long getMaKH() {
         return maKH;
     }
 
-    public KhachHang(Long maKH, String gtinh, String tenKH, String cmnd, String dchi, String soDT, String email) {
-        this.maKH = maKH;
-        this.gtinh = gtinh;
-        this.tenKH = tenKH;
-        this.cmnd = cmnd;
-        this.dchi = dchi;
-        this.soDT = soDT;
-        this.email = email;
-    }
 
     public void setMaKH(Long maKH) {
         this.maKH = maKH;

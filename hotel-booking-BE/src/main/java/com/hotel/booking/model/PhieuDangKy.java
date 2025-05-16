@@ -36,7 +36,7 @@ public class PhieuDangKy {
     @Column(name = "Trangthai", length = 20)
     private String trangThai;
 
-    @Column(name = "TongTien", precision = 18, scale = 2, nullable = false)
+    @Column(name = "tong_tien", precision = 18, scale = 2)
     private BigDecimal tongTien;
 
     // Constructors

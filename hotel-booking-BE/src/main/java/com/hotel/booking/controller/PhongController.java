@@ -1,5 +1,6 @@
 package com.hotel.booking.controller;
 
+import com.hotel.booking.Service.PhongService;
 import com.hotel.booking.model.Phong;
 import com.hotel.booking.model.PhongDTO;
 import com.hotel.booking.repository.PhongRepository;
@@ -27,8 +28,8 @@ public class PhongController {
 
     // Lấy phòng theo ID// Trong Controller
     @GetMapping("/{id}")
-    public ResponseEntity<PhongDTO> getPhongById(@PathVariable Long id) {
-        return ResponseEntity.ok(phongService.getRoomById(id));
+    public PhongDTO getPhongById(@PathVariable Long id) {
+        return phongService.getRoomById(id);
     }
 
     // Thêm mới phòng

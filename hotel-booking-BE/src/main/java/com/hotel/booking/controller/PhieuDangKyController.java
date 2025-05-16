@@ -1,12 +1,15 @@
 package com.hotel.booking.controller;
 
+import com.hotel.booking.Service.PhieuDangKyService;
 import com.hotel.booking.model.PhieuDangKy;
 import com.hotel.booking.model.PhieuDangKyDTO;
 import com.hotel.booking.repository.PhieuDangKyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,9 +38,16 @@ public class PhieuDangKyController {
 
     // Thêm mới phiếu đăng ký
     @PostMapping
-    public ResponseEntity<PhieuDangKy> taoPhieu(@RequestBody PhieuDangKyDTO dto) {
-        PhieuDangKy phieu = phieuDangKyService.taoPhieuDangKy(dto);
-        return ResponseEntity.ok(phieu);
+    public ResponseEntity<?> taoPhieu(@RequestBody PhieuDangKyDTO dto) {
+        try {
+            PhieuDangKy phieu = phieuDangKyService.taoPhieuDangKy(dto);
+            return ResponseEntity.ok(phieu);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST) // => dùng 400 thay vì 500
+                    .body(Collections.singletonMap("error", e.getMessage())); // Trả về dạng JSON
+        }
     }
 
     // Cập nhật phiếu đăng ký

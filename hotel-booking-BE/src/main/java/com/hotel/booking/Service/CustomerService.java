@@ -1,4 +1,4 @@
-package com.hotel.booking.scrips;
+package com.hotel.booking.Service;
 
 import com.hotel.booking.model.KhachHang;
 import com.hotel.booking.repository.KhachHangRepository;
